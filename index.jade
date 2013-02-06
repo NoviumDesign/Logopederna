@@ -1,0 +1,74 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Logopederna
+    meta(name="viewport", content="width=device-width")
+    meta(name="description", content="Vi är logopeder. Till oss kommer barn, ungdomar och vuxna som tycker det är jobbigt att läsa och/eller skriva.")
+    meta(name="keywords", content="Logopederna i Stockholm, Logopederna, Logoped")
+    meta(name="author", content="")
+
+    meta(property="og:title", content="Logopederna")
+    meta(property="og:description", content="Vi är logopeder. Till oss kommer barn, ungdomar och vuxna som tycker det är jobbigt att läsa och/eller skriva.")
+    meta(property="og:url", content="http://logopederna.se")
+
+    link(rel="dns-prefetch", href="http://ajax.googleapis.com")
+    link(rel="dns-prefetch", href="http://www.google-analytics.com/ga.js")
+
+    link(rel="stylesheet", href="css/main.css")
+    script(src="js/vendor/modernizr-2.6.2.min.js")
+
+    //if lt IE 9
+      script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+    //if lt IE 10
+      script(src="js/PIE.js")
+
+  body.home
+
+    //if lt IE 8
+      <p class="chromeframe">Du använder en <strong>utdaterad</strong> webbläsare. Var vänlig och <a href="http://browsehappy.com/">uppgradera</a> webbläsaren för att få en bättre upplevelse av Logopederna.se</p>
+
+    include nav.jade
+
+    .container
+      #jumbotron.carousel.slide
+        // Here we have some super awesome slides
+        .carousel-inner
+          .item.active
+          a(href="#")
+            img(src="img/slide1.png")
+
+        a.carousel-control.left(href="#jumbotron", data-slide="prev") &lsaquo;
+        a.carousel-control.right(href="#jumbotron", data-slide="next") &rsaquo;
+
+      .row
+        .span4
+          .the-l
+            h2 Vilka vi är och vad vi kan göra för dig
+            p Vi som arbetar här är legitimerade logopeder. Till oss kommer barn, ungdomar och vuxna som tycker ...
+            a(href="#") Läs mer...
+        .span4
+          .the-l
+            h2 Hur man kommer till oss på Logopederna
+            p För att få träffa någon av våra logopeder behövs en remiss från BVC, skolhälsovården eller husläkare. Det ...
+            a(href="#") Läs mer...
+        .span4
+          .the-l
+            h2 Senaste nytt om Logopederna
+            p Vi tar nu emot bokningar för föreläsningar 2013. Det finns ett flertal att välja på och ni ser hela listan ...
+            a(href="#") Läs mer...
+
+    include footer.jade
+
+    // Les JS goes here
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+    script(src="js/bootstrap.js")
+    script(src="js/main.js")
+    script
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));

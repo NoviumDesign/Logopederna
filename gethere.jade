@@ -1,0 +1,76 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Logopederna - Kom till oss
+    meta(name="viewport", content="width=device-width")
+    meta(name="description", content="Vi är logopeder. Till oss kommer barn, ungdomar och vuxna som tycker det är jobbigt att läsa och/eller skriva.")
+    meta(name="keywords", content="Logopederna i Stockholm, Logopederna, Logoped")
+    meta(name="author", content="")
+
+    meta(property="og:title", content="Logopederna")
+    meta(property="og:description", content="Vi är logopeder. Till oss kommer barn, ungdomar och vuxna som tycker det är jobbigt att läsa och/eller skriva.")
+    meta(property="og:url", content="http://logopederna.se")
+
+    link(rel="dns-prefetch", href="http://ajax.googleapis.com")
+    link(rel="dns-prefetch", href="http://www.google-analytics.com/ga.js")
+
+    link(rel="stylesheet", href="css/main.css")
+    script(src="js/vendor/modernizr-2.6.2.min.js")
+
+    //if lt IE 9
+      script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+    //if lt IE 10
+      script(src="js/PIE.js")
+
+  body.gethere
+
+    //if lt IE 8
+      <p class="chromeframe">Du använder en <strong>utdaterad</strong> webbläsare. Var vänlig och <a href="http://browsehappy.com/">uppgradera</a> webbläsaren för att få en bättre upplevelse av Logopederna.se</p>
+
+    include nav.jade
+
+    .container
+      .row
+        .span8
+          h1 Vad du behöver för att <br> komma till Logopederna.
+          p.lead Vi utreder och behandlar svårigheter i tal, skrift och matematik. Knepigare än så är det inte.
+        .span4
+          .phone.pull-right
+            img(src="img/phone.png")
+      .row
+        .span12
+          .steps.clearfix
+            .first
+              .top
+                h2 Remiss
+                p För att komma till oss behöver du remiss från skolhälsovård eller primärvård, dvs din husläkare.
+              .bottom
+                p.number 1
+            .second
+              .top
+                h2 Utredning
+                p Vi gör läs- och skrivutredningar samt behandlar tal- och språksvårigheter.
+              .bottom
+                p.number 2
+
+            .third
+              .top
+                h2 Behandling
+                p Vi behandlar tal- och språksvårigheter.
+              .bottom
+                p.number.three 3 
+    include footer.jade
+
+    // Les JS goes here
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+    script(src="js/bootstrap.js")
+    script(src="js/main.js")
+    script
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
