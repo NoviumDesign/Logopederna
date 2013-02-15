@@ -37,28 +37,32 @@ html
         // Here we have some super awesome slides
         .carousel-inner
           .item.active
-          a(href="#")
-            img(src="img/slide1.png")
+            a(href="#")
+              img(src="img/slide2.jpg")
+          .item
+            a(href="#")
+              img(src="img/slide1.png")
+          .item
+            a(href="#")
+              img(src="img/slide3.jpg")
 
         a.carousel-control.left(href="#jumbotron", data-slide="prev") &lsaquo;
         a.carousel-control.right(href="#jumbotron", data-slide="next") &rsaquo;
 
-      .row
-        .span4
-          .the-l
-            h2 Vilka vi är och vad vi kan göra för dig
-            p Vi som arbetar här är legitimerade logopeder. Till oss kommer barn, ungdomar och vuxna som tycker ...
-            a(href="#") Läs mer...
-        .span4
-          .the-l
-            h2 Hur man kommer till oss på Logopederna
-            p För att få träffa någon av våra logopeder behövs en remiss från BVC, skolhälsovården eller husläkare. Det ...
-            a(href="#") Läs mer...
-        .span4
-          .the-l
-            h2 Senaste nytt om Logopederna
-            p Vi tar nu emot bokningar för föreläsningar 2013. Det finns ett flertal att välja på och ni ser hela listan ...
-            a(href="#") Läs mer...
+        .row
+          .span12.intro.three-cols
+            div.left
+              h2 Vilka vi är och vad vi kan göra för dig
+              p Vi som arbetar här är legitimerade logopeder. Till oss kommer barn, ungdomar och vuxna som tycker ...
+              a(href="services.html") Läs mer...
+            div.middle
+              h2 Hur man kommer till oss på Logopederna
+              p För att få träffa någon av våra logopeder behövs en remiss från BVC, skolhälsovården eller husläkare. Det ...
+              a(href="gethere.html") Läs mer...
+            div
+              h2 Senaste nytt om Logopederna
+              p Vi tar nu emot bokningar för föreläsningar 2013. Det finns ett flertal att välja på och ni ser hela listan ...
+              a(href="#") Läs mer...
 
     include footer.jade
 

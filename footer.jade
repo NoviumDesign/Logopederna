@@ -5,8 +5,10 @@
         ul.unstyled
           li
             h5 Logopederna
-          li Våra logopeder
-          li Kontakt oss
+          li 
+            a(href="contact.html#staff") Våra logopeder
+          li 
+            a(href="contact.html") Kontakta oss
       .span2
         ul.unstyled
           li
@@ -42,3 +44,18 @@
             span Hantverkargatan 25 B, entréplan. <br>
             span 104 22 Stockholm <br>
             span Tel: 08-4001 50 30
+
+.settings
+  .btn-group.btn-group-vertical
+    a.btn
+      i.icon-headphones 
+    a.btn.dropdown-toggle(data-toggle="dropdown")
+      i.icon-text-height
+    ul.dropdown-menu.nav.nav-list
+      li.nav-header Textstorlek
+      li
+        a(href="#") Störst
+      li
+        a(href="#") Större
+      li.active
+        a(href="#") Normal

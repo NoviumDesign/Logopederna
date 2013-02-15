@@ -3,7 +3,7 @@ html
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    title Logopederna - Vad vi gör
+    title Logopederna - Utvärdera hjälpmedel
     meta(name="viewport", content="width=device-width")
     meta(name="description", content="Vi är logopeder. Till oss kommer barn, ungdomar och vuxna som tycker det är jobbigt att läsa och/eller skriva.")
     meta(name="keywords", content="Logopederna i Stockholm, Logopederna, Logoped")
@@ -25,7 +25,7 @@ html
     //if lt IE 10
       script(src="js/PIE.js")
 
-  body.services
+  body.evaluate
 
     //if lt IE 8
       <p class="chromeframe">Du använder en <strong>utdaterad</strong> webbläsare. Var vänlig och <a href="http://browsehappy.com/">uppgradera</a> webbläsaren för att få en bättre upplevelse av Logopederna.se</p>
@@ -35,35 +35,61 @@ html
     .container
       .row
         .span8
-          h1 Utreder, behandlar och utbildar
-          p.lead Vi utreder och behandlar svårigheter i tal, skrift och matematik. Knepigare än så är det inte.
+          h1 Utvärdera hjälpmedel.
+          p.lead Hjälp oss att bli bättre! Genom att utvärdera de hjälpmedel du använder kan vi förbättra vår verksamhet ytterligare.
         .span4
-          .phone.pull-right
+          .pull-right
             .ico-phone
-      .row
-        .span12.three-cols.our-services
-          div.left
-            .ico-books
-            h2 Utreder språkliga <br> svårigheter 
-            p För att stärka den språkliga förmågan samt för att få de rätta verktygen att arbeta vidare på egen hand. För barn och skolelever kan det även vara lämpligt att ... 
-            a(href="#") Läs mer...
-          div.middle
-            .ico-speaking
-            h2 Behandlar problem <br> i skrift och tal
-            p För att stärka den språkliga förmågan samt för att få de rätta verktygen att arbeta vidare på egen hand. För barn och skolelever kan det även vara lämpligt att ... 
-            a(href="#") Läs mer...
-          div
-            .ico-edu
-            h2 Utbildar skola <br> och barnomsorg
-            p För att stärka den språkliga förmågan samt för att få de rätta verktygen att arbeta vidare på egen hand. För barn och skolelever kan det även vara lämpligt att ... 
-            a(href="#") Läs mer...
-
-    .faded-text 
-      .container
-        .row.extended-services
+      form
+        .row
           .span6
-            h2 Vi undersöker läs- <br> och skrivsvårigheter
-            p Anledningen till att man kommer till oss är att läsning och stavning/skrivning inte fungerar så bra som för andra i samma ålder. Dessutom vill man veta om det finns möjligheter att få hjälp i skolan eller på arbetsplatsen så att det inte blir så betungande att läsa och skriva. Vi undersöker dina läs- och skrivsvårigheter och rekommenderar lämpliga åtgärder. Vi visar också de hjälpmedel som du kan använda i skolan/arbetet och hemma.                   
+            fieldset
+              legend Personuppgifter
+              .row
+                .span6
+              .control-group
+                .controls
+                  label Förnamn
+                  input(type='text', placeholder='Jonas')
+                .controls
+                  label Efternamn
+                  input(type='text', placeholder='Andresson')
+                .controls
+                  label Födelsedatum
+                  input(type='text', placeholder='ÅÅMMDD')
+        .row
+          .span6
+            fieldset
+              legend Program
+              span.help-block Bocka för de program du har lånat.
+        .row
+          .span12
+            ul.thumbnails
+              li.span2
+                .thumbnail
+                  img(src='http://placehold.it/300x200', alt='')
+                  h5 Stava Rex
+                .thumb-check
+                  input(type='checkbox', value='')
+              li.span2
+                .thumbnail
+                  img(src='http://placehold.it/300x200', alt='')
+                  h5 Spell Right
+                .thumb-check
+                  input(type='checkbox', value='')
+              li.span2
+                .thumbnail
+                  img(src='http://placehold.it/300x200', alt='')
+                  h5 Talsyntes
+                  p (Word Read Plus, Claro Read Plus)
+                .thumb-check
+                  input(type='checkbox', value='')
+              li.span2
+                .thumbnail
+                  img(src='http://placehold.it/300x200', alt='')
+                  h5 Gustavas ordböcker
+                .thumb-check
+                  input(type='checkbox', value='')
 
     include footer.jade
 
