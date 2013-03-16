@@ -4,7 +4,7 @@ html
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
     title Logopederna - Kontakta oss
-    meta(name="viewport", content="width=device-width")
+    meta(name="viewport", content="width=1000px")
     meta(name="description", content="Vi är logopeder. Till oss kommer barn, ungdomar och vuxna som tycker det är jobbigt att läsa och/eller skriva.")
     meta(name="keywords", content="Logopederna i Stockholm, Logopederna, Logoped")
     meta(name="author", content="")
@@ -22,34 +22,51 @@ html
     //if lt IE 9
       script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
-    //if lt IE 10
-      script(src="js/PIE.js")
-
   body.contact
 
     //if lt IE 8
       <p class="chromeframe">Du använder en <strong>utdaterad</strong> webbläsare. Var vänlig och <a href="http://browsehappy.com/">uppgradera</a> webbläsaren för att få en bättre upplevelse av Logopederna.se</p>
 
     include nav.jade
-    .map
-      .container.exstended-container
-        .adress
-          p.lead
-            span Hantverkargatan 25 B,  
-            span 104 22 Stockholm 
-            span Tel: 08-4001 50 30 
-            span info@logopederna.se
+    .tab-content
+        #A.tab-pane.fade.in.active.default-tab
+          .map.kungsholmen
+            .container.exstended-container
+              .adress
+                p.lead
+                  span Hantverkargatan 25 B,  
+                  span 104 22 Stockholm 
+                  span Tel: 08-4001 50 30 
+                  span info@logopederna.se
+        #B.tab-pane.fade
+          .map.lidingo
+            .container.exstended-container
+              .adress
+                p.lead
+                  span Stockholmsvägen 33 plan 5,
+                  span 181 33 Lidingö
+                  span Tel: 073-260 28 82
+                  span info@logopederna.se
+    .tabbable.tabs-below
+      ul.nav.nav-tabs.offices
+        li
+          span Våra mottagningar:
+        li.active
+          a(href='#A', data-toggle='tab') Kungsholmen
+        li
+          a(href='#B', data-toggle='tab') Lidingö
+
 
     .container
       .row#staff
         .span12
-          h2 Hej! Här är alla vi som jobbar på Logopederna. <br> Ta gärna kontakt med någon av oss!
+          h2 Hej! Här är vi som jobbar på Logopederna. <br> Ta gärna kontakt med oss!
         .span3
           .portrait.susanab
             div(itemscope, itemtype="http://schema.org/Person")
               span(itemprop="employee")
                 span(itemprop="email")
-                  a(href="mailto:susana@logopederna.se") Susana Brandhild
+                  a(href="mailto:susana@logopederna.se", data-toggle="popover", data-content="För att maila mig, klicka på namnet eller skriv till susana@logopederna.se", data-original-title="Susanna Brandhild") Susana Brandhild
               span(itemprop="jobTitle") Logoped
               span(itemprop="telephone") 08-40 01 50 31
 
@@ -190,13 +207,29 @@ html
               span(itemprop="jobTitle") Logoped
               span(itemprop="telephone") 0761 - 372 069
         .span3
-          .portrait.jennier
+          .portrait
             div(itemscope, itemtype="http://schema.org/Person")
               span(itemprop="employee") 
                 span(itemprop="email")
-                  a(href="mailto:jennie@logopederna.se") Jennie R. Löfström
-              span(itemprop="jobTitle") Koordinator
-              span(itemprop="telephone") 0761 - 372 019
+                  a(href="mailto:jennie@logopederna.se") Viktoria
+              span(itemprop="jobTitle") Logoped
+              span(itemprop="telephone") 0000 - 000 000
+        .span3
+          .portrait
+            div(itemscope, itemtype="http://schema.org/Person")
+              span(itemprop="employee") 
+                span(itemprop="email")
+                  a(href="mailto:jennie@logopederna.se") Julia
+              span(itemprop="jobTitle") Logoped
+              span(itemprop="telephone") 0000 - 000 000
+        .span3
+          .portrait
+            div(itemscope, itemtype="http://schema.org/Person")
+              span(itemprop="employee") 
+                span(itemprop="email")
+                  a(href="mailto:jennie@logopederna.se") Kajsa
+              span(itemprop="jobTitle") Logoped
+              span(itemprop="telephone") 0000 - 000 000
 
                 
     include footer.jade

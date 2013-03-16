@@ -6,36 +6,46 @@
           li
             h5 Logopederna
           li 
-            a(href="contact.html#staff") Våra logopeder
+            a(href="kontakt#staff") Våra logopeder
           li 
-            a(href="contact.html") Kontakta oss
+            a(href="kontakt") Kontakta oss
+          li 
+            a(href="kontakt") Hitta hit
       .span2
         ul.unstyled
           li
             h5 Utredningar
-          li Dyslexi
-          li Tal och språk
-          li Dyskalkyli
+          li
+            a(href="tjanster#dyslexi") Dyslexi
+          li
+            a(href="tjanster#sprak-och-tal") Språk och tal
+          li
+            a(href="tjanster#dyskalkyli") Dyskalkyli
       .span2
         ul.unstyled
           li
             h5 Behandlingar
-          li Uttal
-          li Röst
-          li Språk
-          li Stammning
+          li
+            a(href="tjanster#uttal")  Uttal
+          li
+            a(href="tjanster#rost") Röst
+          li
+            a(href="tjanster#sprak") Språk
       .span2
         ul.unstyled
           li
             h5 Utbildning
-          li Föreläsningar
-          li Handledning
-      .span2
-        ul.unstyled
           li
-            h5 Hjälpmedel
-          li Hjälpmedel
-          li Utvärdera
+            a(href="utbildning") Föreläsningar
+          li
+            a(href="utbildning") Handledning
+      .span2
+        //- ul.unstyled
+        //-   li
+        //-     h5 Material
+        //-   li Inför besöket
+        //-   li Utvärderingar
+        //-   li Press
       .span2.social
         ul.unstyled
           li
@@ -59,3 +69,15 @@
         a(href="#") Större
       li.active
         a(href="#") Normal
+
+.pageadd
+  .btn-group.btn-group-vertical
+    a.btn.btn-success(href="#myModal", data-toggle="modal")
+      i.icon-plus.icon-white
+    a.btn.dropdown-toggle(data-toggle="dropdown")
+      i.icon-user
+    ul.dropdown-menu.nav.nav-list
+      li.nav-header Kontoinställningar
+      li
+        a(href="#") Logga ut
+

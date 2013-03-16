@@ -1,0 +1,105 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Logopederna - Vad vi gör
+    meta(name="viewport", content="width=1000px")
+    meta(name="description", content="Vi är logopeder. Till oss kommer barn, ungdomar och vuxna som tycker det är jobbigt att läsa och/eller skriva.")
+    meta(name="keywords", content="Logopederna i Stockholm, Logopederna, Logoped")
+    meta(name="author", content="")
+
+    meta(property="og:title", content="Logopederna")
+    meta(property="og:description", content="Vi är logopeder. Till oss kommer barn, ungdomar och vuxna som tycker det är jobbigt att läsa och/eller skriva.")
+    meta(property="og:url", content="http://logopederna.se")
+
+    link(rel="dns-prefetch", href="http://ajax.googleapis.com")
+    link(rel="dns-prefetch", href="http://www.google-analytics.com/ga.js")
+
+    link(rel="stylesheet", href="css/main.css")
+    script(src="js/vendor/modernizr-2.6.2.min.js")
+
+    //if lt IE 9
+      script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+  body.services
+
+    //if lt IE 8
+      <p class="chromeframe">Du använder en <strong>utdaterad</strong> webbläsare. Var vänlig och <a href="http://browsehappy.com/">uppgradera</a> webbläsaren för att få en bättre upplevelse av Logopederna.se</p>
+
+    include nav.jade
+
+    .container
+      .row
+        .span8
+          h1 Vad vi gör
+          p.lead Vi utreder och behandlar svårigheter med språk, tal, läs- och skrivsvårigheter/dyslexi samt matematik. Vi hjälper även till med utprovning och föreskrivning av tekniska hjälpmedel.
+        .span4
+          .phone.pull-right
+            .ico-phone
+      .row
+        .span12.three-cols.our-services
+          div.left
+            .ico-books
+            h2 Utredning 
+            p Vi utför olika typer av logopediska utredningar. Efter utredningen skrivs ett omfattande utlåtande med ev. diagnos, rekommendationer och utprovning av passande hjälpmedel.
+            ul.unstyled
+              li
+               a(href="#dyslexi", data-toggle="tab") Dyslexi
+              li
+                a(href="#sprak-och-tal", data-toggle="tab") Språk och tal
+              li
+                a(href="#dyskalkyli", data-toggle="tab") Dyskalkyli
+          div.middle
+            .ico-speaking
+            h2 Behandling
+            p Vi behandlar svårigheter inom olika områden. Vi anpassar träning och insats efter individens förutsättningar och behov.
+            ul.unstyled
+              li
+               a(href="#sprak", data-toggle="tab") Språk
+              li
+                a(href="#uttal", data-toggle="tab") Uttal
+              li
+                a(href="#rost", data-toggle="tab") Röst
+          div
+            .ico-edu
+            h2 Utbildning
+            p Våra besökare har möjlighet att ta del av föreläsningar, workshops samt eventuell hjälpmedelsutprovning/inträning. Vi handleder även skolpersonal.
+            a(href="utbildning") Läs mer...
+
+    .faded-text
+      .container
+        .row.extended-services
+          .span6.tab-content
+            #tab1.tab-pane.fade.in.active.default-tab
+            #dyslexi.tab-pane.fade
+              h2 Dyslexi
+              p Om man upplever att läsning och stavning/skrivning inte fungerar så bra som för andra i samma ålder, kan kan komma till oss för en utredning. Dyslexi innebär att man har svårigheter med den tekniska läsningen vilket kan resultera i långsamtlästempo och svårigheter med läsförståelse. Det med för ofta även svårigheter med stavning och skrivförmåga. Vi undersöker dina läs- och skrivsvårigheter och rekommenderar lämpliga åtgärder, både för hemmet och skolan/jobbet. Vi utprovar och föreskriver även tekniska hjälpmedel. Hos oss jobbar logopeder som även kan utreda på engelska, finska, ryska och spanska.
+            #sprak-och-tal.tab-pane.fade
+              h2 Språk och tal
+              p Man har olika lätt att tala och förstå språk oavsett modersmål. Om de språkliga svårigheterna hindrar dig/ditt barn i studier, arbete eller det sociala livet kan det bli aktuellt att besöka en logoped. Man kan till exempel ha svårt att lära sig nya ord, uttrycka sig i tal och skrift eller svårt att ta till sig information genom att lyssna m.m. Svårigheter med språket kan i längden påverka läs- och skrivförmågan. Vi undersöker de språkliga förmågorna och hjälper till med behandlingar vid behov. Hos oss jobbar logopeder som även kan utreda på engelska, finska, ryska och spanska.
+            #dyskalkyli.tab-pane.fade
+              h2 Dyskalkyli
+              p Specifika räkneproblem/dyskalkyli innebär att man har svårt med grundläggande räkneförmåga, som de fyra räknesätten samt att per automatik känna igen siffror och antal. Svårigheterna märks ofta tidigt, i årskurs ett eller tidigare. Dessa personer klarar dock dock ofta andra områden bra, såsom resonerande eller logiskt tänkande, så länge det inte rör sig om räkning och matematik. Vi öndersöker dina räknesvårigheter och rekommenderar lämpliga åtgärder.
+            #sprak.tab-pane.fade
+              h2 Språk
+              p Vid språkliga svårigheter/språkstörningar kan man behöva logopedkontakt för att strärka den språkliga förmågan samt för att få de rätta verktygen att arbeta vidare på egen hand. För barn och skolelever kan det även vara lämpligt att förskole- eller skolpersonal får handledning av logoped. En språkbehandling föregås i regel av språklig utredning.
+            #uttal.tab-pane.fade
+              h2 Uttal
+              p Vi erbjuder logopedbehandling vid uttalssvårigheter hos barn och vuxna. Det kan handla om svårigheter att uttala vissa språkljud eller lära sig svenskt uttal.
+            #rost.tab-pane.fade
+              h2 Röst
+              p Vi träffar barn och vuxna med röstproblem som hethet, klumpkänsla eller rösttrötthet. Du kan komma för röstbehandling via remiss från öron-, näsa, halsläkare eller foniater. Går du via din husläkare bör stämbandsstatus göras.
+
+    include footer.jade
+
+    // Les JS goes here
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+    script(src="js/bootstrap.js")
+    script(src="js/main.js")
+    script
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));

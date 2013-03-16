@@ -153,40 +153,42 @@ AddType text/x-vcard                        vcf
 # Gzip compression
 # ----------------------------------------------------------------------
 
-<IfModule mod_deflate.c>
+# !!COMMENTED OUT DUE TO LACK OF SUPPORT AT ONE.COM. USE ZLIB!!
+
+#<IfModule mod_deflate.c>
 
   # Force deflate for mangled headers developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
-  <IfModule mod_setenvif.c>
-    <IfModule mod_headers.c>
-      SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
-      RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
-    </IfModule>
-  </IfModule>
+  #<IfModule mod_setenvif.c>
+   # <IfModule mod_headers.c>
+    #  SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+     # RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+    #</IfModule>
+  #</IfModule>
 
   # Compress all output labeled with one of the following MIME-types
   # (for Apache versions below 2.3.7, you don't need to enable `mod_filter`
   # and can remove the `<IfModule mod_filter.c>` and `</IfModule>` lines as
   # `AddOutputFilterByType` is still in the core directives)
-  <IfModule mod_filter.c>
-    AddOutputFilterByType DEFLATE application/atom+xml \
-                                  application/javascript \
-                                  application/json \
-                                  application/rss+xml \
-                                  application/vnd.ms-fontobject \
-                                  application/x-font-ttf \
-                                  application/xhtml+xml \
-                                  application/xml \
-                                  font/opentype \
-                                  image/svg+xml \
-                                  image/x-icon \
-                                  text/css \
-                                  text/html \
-                                  text/plain \
-                                  text/x-component \
-                                  text/xml
-  </IfModule>
+  #<IfModule mod_filter.c>
+   # AddOutputFilterByType DEFLATE application/atom+xml \
+    #                              application/javascript \
+     #                             application/json \
+      #                            application/rss+xml \
+       #                           application/vnd.ms-fontobject \
+        #                          application/x-font-ttf \
+         #                         application/xhtml+xml \
+          #                        application/xml \
+           #                       font/opentype \
+            #                      image/svg+xml \
+             #                     image/x-icon \
+              #                    text/css \
+               #                   text/html \
+                #                  text/plain \
+                 #                 text/x-component \
+                  #                text/xml
+  #</IfModule>
 
-</IfModule>
+#</IfModule>
 
 
 # ----------------------------------------------------------------------
@@ -332,8 +334,10 @@ FileETag None
 # comment it out and use `Options +SymLinksIfOwnerMatch`, but be aware of the
 # performance impact: http://goo.gl/Mluzd
 
+#!!TOTALLY COMMENTED OUT DUE TO LACK OF SUPPORT AT ONE.COM!!
+
 <IfModule mod_rewrite.c>
-  Options +FollowSymlinks
+# Options +FollowSymlinks
 # Options +SymLinksIfOwnerMatch
   RewriteEngine On
 # RewriteBase /
@@ -421,7 +425,9 @@ FileETag None
 # same name does not exist.
 # webmasterworld.com/apache/3808792.htm
 
-Options -MultiViews
+# !!COMMENTED OUT DUE TO LACK OF SUPPORT AT ONE.COM!!
+
+# Options -MultiViews
 
 
 # ----------------------------------------------------------------------
@@ -457,9 +463,12 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 # default document Usually you should leave this activated, because you
 # shouldn't allow everybody to surf through every folder on your server (which
 # includes rather private places like CMS system folders).
-<IfModule mod_autoindex.c>
-  Options -Indexes
-</IfModule>
+
+# !!COMMENTED OUT, ALREADY IN ONE.COM SERVER CONFIG!!
+
+# <IfModule mod_autoindex.c>
+#   Options -Indexes
+# </IfModule>
 
 # Block access to "hidden" directories or files whose names begin with a
 # period. This includes directories used by version control systems such as
@@ -541,3 +550,12 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 <IfModule mod_php5.c>
   php_value session.cookie_httponly true
 </IfModule>
+
+# ----------------------------------------------------------------------
+# Custom rules
+# ----------------------------------------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html

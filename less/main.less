@@ -115,6 +115,16 @@ a {
     color: @logopedblue;
 }
 
+.relative {
+    position: relative;
+}
+
+.editbutton {
+    position: absolute;
+    left: -52px;
+    display: none;   
+}
+
 .masternav .navbar-inner {
     padding: 9px 10px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -194,6 +204,14 @@ a:focus, .navbar .nav > li > a:hover {
     position: fixed;
     top: 110px;
     left: 0;
+    display: none;
+}
+
+.pageadd {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    display: none;
 }
 
 .the-l {
@@ -327,8 +345,18 @@ hr {
 }
 
 
+.carousel-indicators {
+    li {
+        background-color: #CCC;
+    }
+    .active {
+        background-color: #414141;
+    }
+}
+
+
 #jumbotron {
-    margin-bottom: 50px;
+    position: relative;
 }
 
 #jumbotron:hover {
@@ -347,6 +375,18 @@ hr {
 
     .intro {
         margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .sll {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .fb-link {
+        line-height: 31px;
+        margin-left: 10px;
     }
 }
 
@@ -355,10 +395,12 @@ hr {
     .faded-text {
         background: url('../img/faded-text.jpg') no-repeat center top;
         margin-bottom: -40px;
+        margin-top: -5px;
     }
 
     .extended-services {
-        padding: 45px 0 30px 0;
+        padding: 24px 0 30px 0;
+        min-height: 230px;
 
         h2 {
             font-size: 2.3em;
@@ -469,14 +511,52 @@ hr {
         display: block;
     }
 
+    .offices {
+        width: 940px;
+        margin-left: auto;
+        margin-right: auto;
+        border-top: none;
+        margin-bottom: 40px;
+
+        span {
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-right: 12px;
+            margin-right: 2px;
+            line-height: 20px;
+            font-weight: bold;
+        }
+
+        li {
+            margin-top: 0px;
+        }
+
+        a {
+            -moz-border-radius: 0 0 6px 6px!important;
+            border-radius: 0 0 6px 6px!important;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+
+        .active > a, .tabs-below > .nav-tabs > .active > a:hover, .tabs-below > .nav-tabs > .active > a:focus {
+            border-color: transparent #ACACAC #ACACAC #ACACAC;
+        };
+    }
+
     .exstended-container {
         width: 980px;
     }
 
     .map {
-        margin: 0 0 30px 0;
-        background: url('../img/map.jpg') no-repeat center top;
         height: 400px;
+    }
+
+    .kungsholmen {
+        background: url('../img/map-kungsholmen.jpg') no-repeat center top;
+    }
+
+    .lidingo {
+        background: url('../img/map-lidingo.jpg') no-repeat center top;
     }
 
     .adress {
@@ -505,7 +585,7 @@ hr {
             text-decoration: underline;
         }
 
-        div {
+        > div {
             position: absolute;
             bottom: 0;
             color: #000000;
@@ -569,15 +649,13 @@ hr {
     .arvidl {
         background-image:url('../img/crew/arvidl.jpg');
     }
-    .jennier {
-        background-image:url('../img/crew/jennier.jpg');
-    }
 }
 
 .education {
     .event {
         margin-top: 25px;
         margin-bottom: 10px;
+        position: relative;
 
         .btn {
             margin-top: 4px;
@@ -598,7 +676,7 @@ hr {
     .apps {
         padding: 0 650px 20px 0;
         height: 260px;
-        background-image:url('../img/apps.jpg');
+        background-image:url('../img/promoted-event.png');
     }
 }
 
