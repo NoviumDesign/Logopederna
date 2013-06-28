@@ -1,1 +1,3 @@
 less
+*.jade
+.buildignore

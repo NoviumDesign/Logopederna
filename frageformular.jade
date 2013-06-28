@@ -2,7 +2,7 @@ doctype html
 html
   head
     meta(charset="utf-8")
-    title Logopederna - Kom till oss
+    title Logopederna - Frågeformulär
     meta(name="viewport", content="width=1000")
     meta(name="description", content="Vi är logopeder. Till oss kommer barn, ungdomar och vuxna som tycker det är jobbigt att läsa och/eller skriva.")
     meta(name="keywords", content="Logopederna i Stockholm, Logopederna, Logoped")
@@ -31,36 +31,25 @@ html
     .container
       .row
         .span8
-          h1 Kom till oss
-          p.lead Så här gör du för att få komma till oss på Logopederna.
+          h1 Frågeformulär och blanketter
+          p.lead Blanketter och formulär inför ditt besök hos oss.
         .span4
           .pull-right
             .ico-phone
       .row
+        .span6
+          h2 Frågeformulär
+          p Inför ditt besök skickas ett frågeformulär ut till din adress. Om detta formulär kommit bort eller om vi av någon anledning inte kunnat skicka ett så går de att ladda ner här, så att du själv kan skriva ut och fylla i det inför ditt besök. Fyll gärna i så mycket information som möjligt!
+      .row
         .span12
-          .steps.clearfix
-            .first
-              .top
-                h2 Remiss
-                p För att komma till oss behöver du en remiss från skolhälsovård eller primärvård, dvs din husläkare.
-              .bottom
-                p.number 1
-            .second
-              .top
-                h2 Utredning
-                p Därefter utreder vi eventuella svårigheter. Detta sker under ett eller flera besök på någon av våra mottagningar.
-              .bottom
-                p.number 2
-
-            .third
-              .top
-                h2 Åtgärd
-                p Slutligen sker en återgivning av resultaten, rekommendationer samt eventuell hjälpmedelsutprovning och/eller behandling.
-              .bottom
-                p.number.three 3
-        .span6 
-          h2.step1 Remiss
-          p.plead Vi har avtal med Stockholms läns landsting.
-          p För att få träffa någon av våra logopeder behövs en remiss från BVC, skolhälsovården eller husläkare. Det innebär att det är kostnadsfritt att komma till oss om man är under 18 år. För vuxna gäller vanlig patientavgift (100kr). När vi har mottagit din remiss kontaktar vi dig.
+          ul
+            li
+              a#tjanster(href="docs/frageformular-elev-upp-till-ak-6.pdf", target="_blank") Formulär för föräldrar till elever upp till årskurs 6 
+            li
+              a#tjanster(href="docs/frageformular-7-gymnasiet.pdf", target="_blank") Formulär för föräldrar och elever åk 7 t.o.m. gymnasiet
+            li
+              a#tjanster(href="docs/frageformular-vuxen.pdf", target="_blank") Formulär för personer över 18 år
+            li
+              a#tjanster(href="docs/frageformular-larare.pdf", target="_blank") Lärarformulär
 
     include footer.jade

@@ -2,9 +2,8 @@ doctype html
 html
   head
     meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
     title Logopederna
-    meta(name="viewport", content="width=1000px")
+    meta(name="viewport", content="width=1000")
     meta(name="description", content="Vi är logopeder. Till oss kommer barn, ungdomar och vuxna som tycker det är jobbigt att läsa och/eller skriva.")
     meta(name="keywords", content="Logopederna i Stockholm, Logopederna, Logoped")
     meta(name="author", content="")
@@ -22,9 +21,6 @@ html
     //if lt IE 9
       script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
-    //if lt IE 10
-      script(src="js/PIE.js")
-
   body.home
 
     //if lt IE 8
@@ -39,15 +35,15 @@ html
           li(data-target='#jumbotron', data-slide-to='1')
         .carousel-inner
           .item.active
-            img(src="img/slide1.jpg", usemap="#imgmap")
+            img(src="img/slide1.jpg", usemap="#imgmap", alt="Välkommen till våra mottagningar")
             map(id="imgmap", name="imgmap")
-              area(shape="poly", alt="Våra mottagningar", title="Våra mottagningar", coords="122,89,389,70,416,88,424,114,422,239,365,257,332,271,227,274,129,338,171,279,82,280,63,265,60,248,88,113,100,100", href="kontakt", target="_self")
-              area(shape="poly", alt="Mer om vad vi gör", title="Mer om vad vi gör", coords="501,140,831,122,869,331,803,261,624,268,556,241,502,235", href="tjanster", target="_self")
-              area(shape="poly", alt="Mer om våra utbildningar", title="Mer om våra utbildningar", coords="459,237,528,238,582,251,631,272,664,310,670,349,661,382,647,402,671,419,707,429,740,426,764,423,736,445,691,454,651,450,620,441,600,428,558,447,500,457,434,459,377,449,332,432,296,403,278,363,289,311,326,276,375,253,421,240", href="utbildning", target="_self")
+              area(shape="poly", alt="Våra mottagningar", title="Våra mottagningar", coords="122,89,389,70,416,88,424,114,422,239,365,257,332,271,227,274,129,338,171,279,82,280,63,265,60,248,88,113,100,100", href="kontakt.html", target="_self")
+              area(shape="poly", alt="Mer om vad vi gör", title="Mer om vad vi gör", coords="501,140,831,122,869,331,803,261,624,268,556,241,502,235", href="tjanster.html", target="_self")
+              area(shape="poly", alt="Mer om våra utbildningar", title="Mer om våra utbildningar", coords="459,237,528,238,582,251,631,272,664,310,670,349,661,382,647,402,671,419,707,429,740,426,764,423,736,445,691,454,651,450,620,441,600,428,558,447,500,457,434,459,377,449,332,432,296,403,278,363,289,311,326,276,375,253,421,240", href="utbildning.html", target="_self")
           .item
-            a(href="utbildning")
-              img(src="img/slide2.png")
-        img.sll(src="img/sll.png")
+            a(href="utbildning.html")
+              img(src="img/slide2.png", alt="Utbildningar hos Logopederna")
+        img.sll(src="img/sll.png", alt="Vi arbetar på uppdrag av Stockholms läns landsting")
 
         a.carousel-control.left(href="#jumbotron", data-slide="prev") &lsaquo;
         a.carousel-control.right(href="#jumbotron", data-slide="next") &rsaquo;
@@ -57,27 +53,28 @@ html
           div.left
             h2 Vilka vi är och vad vi kan göra för dig
             p Vi som jobbar här är legitimerade logopeder. Vi jobbar med dyslexi samt språk- och tal.
-            a(href="tjanster") Läs mer...
+            a(href="tjanster.html") Läs mer...
           div.middle
             h2 Hur man kommer till oss på Logopederna
-            p Vi arbetar på uppdrag av Stockholms läns landsting. För att träffa någon utav våra logopeder behöver du en remiss.
-            a(href="kom-till-oss") Läs mer...
+            p Vi arbetar på uppdrag av Stockholms läns landsting. För att träffa någon av våra logopeder behöver du en remiss.
+            a(href="kom-till-oss.html") Läs mer...
           div.relative
             h2 Senaste nytt hos Logopederna!
-            p Nyheter om mottagningen, logopedi och annat av intresse.
+            p Nyheter om mottagningarna, logopedi och annat av intresse.
             a.fb-link(href="http://www.facebook.com/pages/Logopederna/175311022603957", target="_blank")
-              img.pull-left(src="img/icon-facebook.png")
+              img.pull-left(src="img/icon-facebook.png", alt="Följ oss på Facebook")
               | Följ oss på Facebook...
 
     include footer.jade
+    //- #alertModal.modal.hide.fade(tabindex="-1", role="dialog", aria-labelledby="telephoneModalLabel", aria-hidden="true")
+    //-   .modal-header
+    //-     button.close(type="button", data-dismiss="modal", aria-hidden="true")
+    //-       | x
+    //-     h3#alertModalLabel Telefonväxel ur funktion
+    //-   .modal-body
+    //-     p Vi har tyvärr stora problem med vår telefonväxel då en kabel av misstag grävts av. Samtliga fasta nummer hos Logopederna är påverkade. De Logopeder som har mobilnummer går fortfarande att nå som vanligt. För övriga kontaker hänvisar vi tillfälligt till nummer <strong>076 - 137 20 19.</strong>
 
-    // Les JS goes here
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
-    script(src="js/bootstrap.js")
-    script(src="js/main.js")
-    script
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
+    //- script
+    //-     $(window).load(function(){
+    //-         $('#alertModal').modal('show');
+    //-     });
