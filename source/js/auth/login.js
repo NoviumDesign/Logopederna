@@ -1,29 +1,21 @@
-// url to send auth details
-var auth_url = 'http://logopederna.local/backend/auth-login.php';
-
-
-// submit login form
 $('body.admin #login').live('submit', function (event)
 {
+	var user, pass, secret, ajax_url;
+
+	ajax_url = 'http://logopederna.local/backend/auth/login.php';
+	
 	event.preventDefault();
-
-	var user, pass, secret;
-
-	if (typeof localStorage.secret != 'undefined')
-	{
-		secret = localStorage.secret;
-	}
 
 	user = $('#user').val();
 	pass = $('#pass').val();
 
 	$.ajax({
 	  type: 'POST',
-	  url: auth_url,
+	  url: ajax_url,
 	  data: {
 	  	'user': user,
 	  	'pass': pass,
-	  	'secret': secret
+	  	'secret': localStorage.secret
 	  },
 	  dataType : 'json',
 	  success: function (response)

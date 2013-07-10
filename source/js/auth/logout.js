@@ -1,13 +1,14 @@
-// url to send secret
-var auth_logout_url = 'http://logopederna.local/backend/auth-logout.php';
-
 $('#logout').live('click', function (event)
 {
+	var ajax_url;
+
+	ajax_url = 'http://logopederna.local/backend/auth/logout.php';
+
 	event.preventDefault();
 
 	$.ajax({
 		type: 'POST',
-		url: auth_logout_url,
+		url: ajax_url,
 		data: {
 			'secret': localStorage.secret
 		},

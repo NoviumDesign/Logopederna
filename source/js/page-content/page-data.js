@@ -1,6 +1,4 @@
-var page_data_url, distribute_content;
-
-page_data_url = 'http://logopederna.local/backend/get-page-data.php';
+var distribute_content;
 
 distribute_content = function (content_json)
 {
@@ -43,20 +41,17 @@ distribute_content = function (content_json)
 
 $(document).ready(function ()
 {
-	var secret, page_id;
+	var secret, page_id, ajax_url;
 
-	if (localStorage.secret)
-	{
-		secret = localStorage.secret;
-	}
+	ajax_url = 'http://logopederna.local/backend/page-data/get.php';
 
 	page_id = $('body').attr('class');
 
 	$.ajax({
 		type: 'POST',
-		url: page_data_url,
+		url: ajax_url,
 		data: {
-			'secret': secret,
+			'secret': localStorage.secret,
 			'page_id': page_id
 		},
 		dataType : 'json',

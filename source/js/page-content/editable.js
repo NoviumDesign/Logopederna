@@ -25,7 +25,10 @@ $(window).bind('beforeunload', function(){
 // prevent built in styling
 $('[contenteditable]').live('keydown', function (event)
 {
-	change_content = true;
+	// not a modal
+	if ( ! change_content && typeof $(this).parents('#event-modal')[0] == 'undefined') {
+		change_content = true;
+	}
 
 	if (event.ctrlKey)
 	{
@@ -51,7 +54,7 @@ $('#save-changes').live('click', function ()
 {	
 	var elements_with_content, page_id, ajax_url;
 
-	ajax_url = 'http://logopederna.local/backend/edit-page-data.php';
+	ajax_url = 'http://logopederna.local/backend/page-data/edit.php';
 
 	elements_with_content = {};
 	page_id = $('body').attr('id');
