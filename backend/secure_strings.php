@@ -2,7 +2,13 @@
 
 function convert_string($string)
 {
-	return htmlentities($string, ENT_QUOTES, "UTF-8");
+	// decode beacuse js already "htmlentities" before send
+	$string = html_entity_decode($string);
+
+	// html entites
+	$string = htmlentities($string, ENT_QUOTES, "UTF-8");
+
+	return $string;
 }
 
 function secure_strings($array)

@@ -19,6 +19,8 @@
 		// secret exist on client
 		if ($auth->check_session($_POST['secret']))
 		{
+			$output['auth'] = true;
+
 			if (isset($_POST['page_id']) && isset($_POST['page_content']))
 			{
 				$this_page_data = array();
@@ -27,6 +29,9 @@
 				$this_page_data['content'] = secure_strings($_POST['page_content']);
 
 				$page_data->set($_POST['page_id'], json_encode($this_page_data));
+
+				// sends back the data for update
+				$output['data'] = json_encode($this_page_data);
 			}
 			else
 			{
@@ -35,7 +40,7 @@
 		}
 		else
 		{
-			$output['error']['auth'] = 'Din inloggningssession har gått ut och du är därmed inte längre inloggad.';
+			$output['error']['auth'] = 'Din inloggningssession har gått ut och du är därmed inte längre inloggad. Men sörj ej, öppna bara en ny flik och logga in där, sedan ska det funka att spara dina ändringar! ;)';
 		}
 	}
 	else
