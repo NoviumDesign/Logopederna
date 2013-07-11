@@ -40,6 +40,17 @@ $('[contenteditable]').live('keydown', function (event)
 			// inner html = inner text
 			$(this).html($(this).text());
 		}
+		else if (event.keyCode === 86)
+		{
+			// paste, remove all tags
+
+			var that = $(this);
+			setTimeout(function ()
+				{
+					// inner html = inner text
+					that.html(that.text());
+				}, 0);
+		}
 	}
 
 	if (event.keyCode === 13)
@@ -47,6 +58,17 @@ $('[contenteditable]').live('keydown', function (event)
 		// space
 		event.preventDefault();
 	}
+});
+
+$('[contenteditable]').live('paste', function (event)
+{
+	// works for both, but better safe than sorry... ;)
+	var that = $(this);
+	setTimeout(function ()
+		{
+			// inner html = inner text
+			that.html(that.text());
+		}, 0);
 });
 
 
