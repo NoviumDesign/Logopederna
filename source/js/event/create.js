@@ -17,9 +17,7 @@ $('body.auth #new-event').live('click', function ()
 
 $('body.auth #event-modal[data-which=new-event] #event-modal-submit').live('click', function ()
 {
-	var event_title, event_lead, event_text, event_how, event_registration, event_start, event_end, ajax_url;
-
-	ajax_url = 'http://logopederna.local/backend/event/new.php';
+	var event_title, event_lead, event_text, event_how, event_registration, event_start, event_end;
 
 	event_title = $('#event-title').text();
 	event_lead = $('#event-lead').text();
@@ -33,9 +31,8 @@ $('body.auth #event-modal[data-which=new-event] #event-modal-submit').live('clic
 	{
 		$.ajax({
 			type: 'POST',
-			url: ajax_url,
+			url: 'event/new.php',
 			data: {
-				'secret': localStorage.secret,
 				'title': event_title,
 				'lead': event_lead,
 				'text': event_text,
@@ -44,7 +41,6 @@ $('body.auth #event-modal[data-which=new-event] #event-modal-submit').live('clic
 				'start': event_start,
 				'end': event_end
 			},
-			dataType : 'json',
 			success: function (response)
 			{
 				if ( ! response.auth)

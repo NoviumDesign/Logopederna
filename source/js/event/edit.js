@@ -1,9 +1,7 @@
 // modal
 $('body.auth .edit-event').live('click', function ()
 {
-	var id, ajax_url;
-
-	ajax_url = 'http://logopederna.local/backend/event/get.php';
+	var id;
 
 	id = $(this).data('event-id');
 
@@ -13,12 +11,10 @@ $('body.auth .edit-event').live('click', function ()
 
 	$.ajax({
 		type: 'POST',
-		url: ajax_url,
+		url: 'event/get.php',
 		data: {
-			'secret': localStorage.secret,
 			'event_id': id 
 		},
-		dataType : 'json',
 		success: function (response)
 		{
 			if ( ! response.auth)
@@ -85,7 +81,6 @@ $('body.auth #event-modal[data-which=edit-event] #event-modal-submit').live('cli
 				'end': event_end,
 				'event_id': event_id
 			},
-			dataType : 'json',
 			success: function (response)
 			{
 				if ( ! response.auth)

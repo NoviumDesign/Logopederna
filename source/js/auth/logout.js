@@ -2,17 +2,11 @@ $('#logout').live('click', function (event)
 {
 	var ajax_url;
 
-	ajax_url = 'http://logopederna.local/backend/auth/logout.php';
-
 	event.preventDefault();
 
 	$.ajax({
 		type: 'POST',
-		url: ajax_url,
-		data: {
-			'secret': localStorage.secret
-		},
-		dataType : 'json',
+		url: 'auth/logout.php',
 		success: function ()
 		{
 			localStorage.removeItem('secret');

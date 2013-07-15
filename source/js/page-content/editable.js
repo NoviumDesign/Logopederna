@@ -74,9 +74,7 @@ $('[contenteditable]').live('paste', function (event)
 
 $('#save-changes').live('click', function ()
 {	
-	var elements_with_content, page_id, ajax_url;
-
-	ajax_url = 'http://logopederna.local/backend/page-data/edit.php';
+	var elements_with_content, page_id;
 
 	elements_with_content = {};
 	page_id = $('body').attr('id');
@@ -110,13 +108,11 @@ $('#save-changes').live('click', function ()
 
 	$.ajax({
 		type: 'POST',
-		url: ajax_url,
+		url: 'page-data/edit.php',
 		data: {
-			'secret': localStorage.secret,
 			'page_id': page_id,
 			'page_content': elements_with_content
 		},
-		dataType : 'json',
 		success: function (response)
 		{
 			if (response.data)

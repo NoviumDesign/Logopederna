@@ -1,8 +1,6 @@
 $('body.admin #login').live('submit', function (event)
 {
-	var user, pass, secret, ajax_url;
-
-	ajax_url = 'http://logopederna.local/backend/auth/login.php';
+	var user, pass, secret;
 	
 	event.preventDefault();
 
@@ -11,13 +9,11 @@ $('body.admin #login').live('submit', function (event)
 
 	$.ajax({
 	  type: 'POST',
-	  url: ajax_url,
+	  url: 'auth/login.php',
 	  data: {
 	  	'user': user,
-	  	'pass': pass,
-	  	'secret': localStorage.secret
+	  	'pass': pass
 	  },
-	  dataType : 'json',
 	  success: function (response)
 	  {
 	  	if (typeof response.success.auth != 'undefined')

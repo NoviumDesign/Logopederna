@@ -41,20 +41,16 @@ distribute_content = function (content_json)
 
 $(document).ready(function ()
 {
-	var secret, page_id, ajax_url;
-
-	ajax_url = 'http://logopederna.local/backend/page-data/get.php';
+	var secret, page_id;
 
 	page_id = $('body').attr('class');
 
 	$.ajax({
 		type: 'POST',
-		url: ajax_url,
+		url: 'page-data/get.php',
 		data: {
-			'secret': localStorage.secret,
 			'page_id': page_id
 		},
-		dataType : 'json',
 		success: function (response)
 		{
 			// has auth?

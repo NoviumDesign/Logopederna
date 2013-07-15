@@ -1,8 +1,6 @@
 $('body.auth .delete-event').live('click', function ()
 {
-	var event_id, ajax_url, event_html;
-
-	ajax_url = 'http://logopederna.local/backend/event/delete.php';
+	var event_id, event_html;
 
 	event_id = $(this).data('event-id');
 
@@ -10,12 +8,10 @@ $('body.auth .delete-event').live('click', function ()
 
 	$.ajax({
 		type: 'POST',
-		url: ajax_url,
+		url: 'event/delete.php',
 		data: {
-			'secret': localStorage.secret,
 			'event_id': event_id 
 		},
-		dataType : 'json',
 		success: function (response)
 		{
 			if ( ! response.auth)
