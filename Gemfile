@@ -32,3 +32,6 @@ gem 'middleman-s3_sync'
 platforms :mri_18 do
   gem "ruby18_source_location"
 end
+
+# require js thing
+gem 'sprockets', '~> 2.0'
