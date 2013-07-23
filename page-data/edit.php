@@ -1,4 +1,6 @@
 <?php
+	// headers
+	include('../configs/headers.php');
 
 	// get Auth class
 	include('../lib/Auth.php');
