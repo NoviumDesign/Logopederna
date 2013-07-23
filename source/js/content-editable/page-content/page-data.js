@@ -43,7 +43,7 @@ $(document).ready(function ()
 {
 	var secret, page_id;
 
-	page_id = $('body').attr('class');
+	page_id = $('body').attr('id');
 
 	$.ajax({
 		type: 'POST',
