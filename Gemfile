@@ -16,6 +16,15 @@ gem "therubyracer"
 # HTML minifier
 gem "middleman-minify-html", "~> 3.1.0"
 
+# => Ing optimizer engine
+gem "image_optim", "~> 0.8.1"
+
+# Img optimizer for midleman
+gem "middleman-imageoptim", "~> 0.0.4"
+
+# Tool to publish to AWS S3 on build
+gem 'middleman-s3_sync'
+
 # For faster file watcher updates:
 # gem "wdm", "~> 0.1.0") # Windows
 

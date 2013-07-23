@@ -51,6 +51,9 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
+# Super-pretty URL:s using directorys for every html-page.
+activate :directory_indexes
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -62,11 +65,14 @@ configure :build do
   # Enable cache buster
   activate :asset_hash
 
-  # Minify HTML on build
+  # Minify HTML
   activate :minify_html
 
   # GZip on build
-  # activate :gzip
+  activate :gzip
+
+  # Img optimizing (requires local libs outside the gem system. For more info, look at https://github.com/toy/image_optim)
+  # activate :image_optim
 
   # Use relative URLs
   # activate :relative_assets

@@ -19,18 +19,11 @@
         <link rel="dns-prefetch" href="http://ajax.googleapis.com">
         <link rel="dns-prefetch" href="http://www.google-analytics.com/ga.js">
 
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/css/admin.css">
 
-
-
-
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/admin.css">
-
-
-
-
-        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
         
     </head>
     <body id="<%= page_classes %>" class="<%= page_classes %>">
@@ -112,32 +105,32 @@
         <%= partial "footer" %>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
-        <script src="js/scripts/bootstrap.js"></script>
-        <script src="js/scripts/plugins.js"></script>
-        <script src="js/scripts/main.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+        <script src="/js/scripts/bootstrap.js"></script>
+        <script src="/js/scripts/plugins.js"></script>
+        <script src="/js/scripts/main.js"></script>
 
 
-        <script src="../source/js/scripts/init.js"></script><!-- only for admin.html -->
+        <script src="/js/scripts/init.js"></script><!-- only for admin.html -->
 
-        <script src="../source/js/auth/login.js"></script><!-- only for admin.html -->
-        <script src="../source/js/auth/logout.js"></script>
+        <script src="/js/auth/login.js"></script><!-- only for admin.html -->
+        <script src="/js/auth/logout.js"></script>
 
-        <script src="../source/js/page-content/page-data.js"></script>
-        <script src="../source/js/page-content/editable.js"></script>
+        <script src="/js/page-content/page-data.js"></script>
+        <script src="/js/page-content/editable.js"></script>
         
-        <script src="../source/js/events/view.js"></script><!-- only for utbildning.html -->
+        <script src="/js/events/view.js"></script><!-- only for utbildning.html -->
 
-        <script src="../source/js/event/create.js"></script><!-- only for utbildning.html -->
-        <script src="../source/js/event/edit.js"></script><!-- only for utbildning.html -->
-        <script src="../source/js/event/delete.js"></script><!-- only for utbildning.html -->
+        <script src="/js/event/create.js"></script><!-- only for utbildning.html -->
+        <script src="/js/event/edit.js"></script><!-- only for utbildning.html -->
+        <script src="/js/event/delete.js"></script><!-- only for utbildning.html -->
 
-        <script src="../source/js/page-specific/kontakt.js"></script><!-- only for kontakt.html -->
+        <script src="/js/page-specific/kontakt.js"></script><!-- only for kontakt.html -->
 
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- Google Analytics -->
         <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            var _gaq=[['_setAccount','UA-40884916-1],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
