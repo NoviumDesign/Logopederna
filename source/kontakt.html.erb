@@ -10,7 +10,7 @@ ID: kontakt
     <div class="map kungsholmen">
       <div class="container exstended-container">
         <div class="adress">
-          <p class="lead"><span>Hantverkargatan 25 B,  </span><span>104 22 Stockholm </span><span>Tel: 08-4001 50 30 </span><span>info@logopederna.se</span></p>
+          <p class="lead"><span data-content-editable="kungsholmenStreet">Hantverkargatan 25 B,</span><span data-content-editable="kungsholmenCity">104 22 Stockholm </span><span data-content-editable="kungsholmenPhone">Tel: 08-4001 50 30 </span><span data-content-editable="kungsholmenEmail">info@logopederna.se</span></p>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@ ID: kontakt
     <div class="map lidingo">
       <div class="container exstended-container">
         <div class="adress">
-          <p class="lead"><span>Stockholmsvägen 33 plan 5,</span><span>181 33 Lidingö</span><span>Tel: 073-260 28 82</span><span>info@logopederna.se</span></p>
+          <p class="lead"><span data-content-editable="lidingoStreet">Stockholmsvägen 33 plan 5,</span><span data-content-editable="lidingoCity">181 33 Lidingö</span><span lidingoPhone>Tel: 073-260 28 82</span><span data-content-editable="lidingoEmail">info@logopederna.se</span></p>
         </div>
       </div>
     </div>
@@ -27,15 +27,15 @@ ID: kontakt
 </div>
 <div class="tabbable tabs-below">
   <ul class="nav nav-tabs offices">
-    <li><span>Våra mottagningar:</span></li>
-    <li class="active"><a href="#A" data-toggle="tab">Kungsholmen</a></li>
-    <li><a href="#B" data-toggle="tab">Lidingö</a></li>
+    <li><span data-content-editable="span1">Våra mottagningar:</span></li>
+    <li class="active"><a href="#A" data-toggle="tab" data-content-editable="a1">Kungsholmen</a></li>
+    <li><a href="#B" data-toggle="tab" data-content-editable="a2">Lidingö</a></li>
   </ul>
 </div>
 <div class="container">
   <div id="staff" class="row">
     <div class="span12">
-      <h2>Hej! Här är vi som jobbar på Logopederna. <br> Ta gärna kontakt med oss!</h2>
+      <h2 data-content-editable="h1">Hej! Här är vi som jobbar på Logopederna. <br> Ta gärna kontakt med oss!</h2>
     </div>
     <% data.people.speechtherapist.each do |employee| %>
     <div class="span3">
