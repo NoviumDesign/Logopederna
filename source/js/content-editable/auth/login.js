@@ -7,8 +7,10 @@ $('body.admin #login').live('submit', function (event)
 	user = $('#user').val();
 	pass = $('#pass').val();
 
-	$.ajax({
-	  type: 'POST',
+	$('#user').val('');
+	$('#pass').val('');
+
+	cors.post({
 	  url: 'auth/login.php',
 	  data: {
 	  	'user': user,
@@ -33,5 +35,4 @@ $('body.admin #login').live('submit', function (event)
 	  	}
 	  }
 	});
-
 });

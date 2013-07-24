@@ -105,8 +105,7 @@ get_all_events = function ()
 
 	page_id = $('body').attr('class');
 
-	$.ajax({
-		type: 'POST',
+	cors.post({
 		url: ajax_url,
 		data: {
 			'secret': localStorage.secret

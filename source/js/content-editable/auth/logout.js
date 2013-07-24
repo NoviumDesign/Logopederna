@@ -4,8 +4,7 @@ $('#logout').live('click', function (event)
 
 	event.preventDefault();
 
-	$.ajax({
-		type: 'POST',
+	cors.post({
 		url: 'auth/logout.php',
 		success: function ()
 		{

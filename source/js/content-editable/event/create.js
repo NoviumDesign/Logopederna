@@ -29,8 +29,7 @@ $('body.auth #event-modal[data-which=new-event] #event-modal-submit').live('clic
 
 	if (event_title && event_lead && event_text && event_start)
 	{
-		$.ajax({
-			type: 'POST',
+		cors.post({
 			url: 'event/new.php',
 			data: {
 				'title': event_title,

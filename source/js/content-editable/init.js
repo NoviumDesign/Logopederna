@@ -1,3 +1,5 @@
+// = require content-editable/lib/cors
+
 // = require content-editable/config/settings
 // = require content-editable/config/ajax
 

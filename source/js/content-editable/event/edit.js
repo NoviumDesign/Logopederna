@@ -9,8 +9,7 @@ $('body.auth .edit-event').live('click', function ()
 	$('#event-modal-label').html('Redigera händelse');
 	$('#event-modal-submit').attr('data-event-id', id);
 
-	$.ajax({
-		type: 'POST',
+	cors.post({
 		url: 'event/get.php',
 		data: {
 			'event_id': id 
@@ -51,9 +50,7 @@ $('body.auth .edit-event').live('click', function ()
 
 $('body.auth #event-modal[data-which=edit-event] #event-modal-submit').live('click', function ()
 {
-	var event_title, event_lead, event_text, event_how, event_registration, event_start, event_end, ajax_url, event_id;
-
-	ajax_url = 'http://logopederna.local/backend/event/edit.php';
+	var event_title, event_lead, event_text, event_how, event_registration, event_start, event_end, event_id;
 
 	event_id = $(this).data('event-id');
 
@@ -67,9 +64,8 @@ $('body.auth #event-modal[data-which=edit-event] #event-modal-submit').live('cli
 
 	if (event_title && event_lead && event_text && event_start)
 	{
-		$.ajax({
-			type: 'POST',
-			url: ajax_url,
+		cors.post({
+			url: 'event/edit.php',
 			data: {
 				'secret': localStorage.secret,
 				'title': event_title,

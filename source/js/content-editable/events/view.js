@@ -101,9 +101,11 @@ get_all_events = function ()
 {
 	page_id = $('body').attr('class');
 
-	$.ajax({
-		type: 'POST',
+	cors.post({
 		url: 'events/get.php',
+		data: {
+			'test': 'est'
+		},
 		success: function (response)
 		{
 			if (response.error.auth)

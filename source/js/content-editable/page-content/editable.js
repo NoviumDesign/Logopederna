@@ -106,8 +106,7 @@ $('#save-changes').live('click', function ()
 		elements_with_content[index] = content;
 	});
 
-	$.ajax({
-		type: 'POST',
+	cors.post({
 		url: 'page-data/edit.php',
 		data: {
 			'page_id': page_id,
@@ -119,6 +118,8 @@ $('#save-changes').live('click', function ()
 			{
 				// reset
 				change_content = false;
+
+				alert('Ändringarna sparade!')
 				
 				distribute_content(response.data);
 			}

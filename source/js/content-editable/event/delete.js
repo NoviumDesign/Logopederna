@@ -6,8 +6,7 @@ $('body.auth .delete-event').live('click', function ()
 
 	event_html = $(this).parents('.event');
 
-	$.ajax({
-		type: 'POST',
+	cors.post({
 		url: 'event/delete.php',
 		data: {
 			'event_id': event_id 

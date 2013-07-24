@@ -45,8 +45,7 @@ $(document).ready(function ()
 
 	page_id = $('body').attr('id');
 
-	$.ajax({
-		type: 'POST',
+	cors.post({
 		url: 'page-data/get.php',
 		data: {
 			'page_id': page_id
@@ -74,7 +73,7 @@ $(document).ready(function ()
 			{
 				distribute_content(response.data);
 			}
-			else
+			else if(response.error)
 			{
 				alert(response.error.data);
 			}
