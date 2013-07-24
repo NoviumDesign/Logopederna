@@ -16,6 +16,24 @@ render_event_list = function (events)
 	// clear event list
 	$('#event-list').html('')
 
+	console.log(events, events.length)
+
+	if (events.length === 0)
+	{
+		html = 
+			'<div class="row event">' +
+				'<div class="span12" style="position:relative">' +
+					'<div class="event apps">' +
+						'<h1>För närvarande finns det inga event inbokade, men kom snart tillbaka igen.</h1>' +
+					'</div>' +
+				'</div>' +
+			'</div>';
+
+		$('#event-list').append(html);
+
+		return;
+	}
+
 	first = true;
 	for (id in events)
 	{
@@ -103,9 +121,6 @@ get_all_events = function ()
 
 	cors.post({
 		url: 'events/get.php',
-		data: {
-			'test': 'est'
-		},
 		success: function (response)
 		{
 			if (response.error.auth)
