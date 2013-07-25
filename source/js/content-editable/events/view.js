@@ -24,7 +24,8 @@ render_event_list = function (events)
 			'<div class="row event">' +
 				'<div class="span12" style="position:relative">' +
 					'<div class="event apps">' +
-						'<h1>För närvarande finns det inga event inbokade, men kom snart tillbaka igen.</h1>' +
+						'<h1>Inga event</h1>' +
+						'<p>För närvarande finns det inga event inbokade, men kom snart tillbaka igen.</p>' +
 					'</div>' +
 				'</div>' +
 			'</div>';

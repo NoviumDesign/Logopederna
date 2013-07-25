@@ -10,16 +10,18 @@ ID: admin
     <div class="span6">
       <h1 data-content-editable="h1"></h1>
       <p class="lead" data-content-editable="p1"></p>
-      <div id="status" class="alert alert-error">
-        <button type="button" data-dismiss="alert" class="close">×</button><span>Felaktigt användarnamn eller lösenord.</span>
-      </div>
+      <div id="status" class="alert hide"></div>
       <form id="login">
         <fieldset>
           <label>Användar-ID</label>
           <input type="text" id="user" placeholder="Användarnamn" class="span3" tabindex="1">
           <label>Lösenord</label>
           <input type="password" id="pass" placeholder="Lösenord" class="span3" tabindex="2">
-          <div class="help-block"><a id="lostpassword" href="#" data-toggle="popover" data-placement="right" data-content="Kontakta Noviums drift på drift@noviumdesign.se så hjälper vi er." data-original-title="Inloggningsproblem?">Problem med att logga in?</a></div>
+          <div class="help-block">
+            <a id="lostpassword" href="#" data-toggle="popover" data-placement="right" data-content="Kontakta Noviums drift på drift@noviumdesign.se så hjälper vi er." data-original-title="Inloggningsproblem?">
+              Problem med att logga in?
+            </a>
+          </div>
           <input type="submit" class="btn btn-large btn-primary" tabindex="3" value="Logga in">
         </fieldset>
       </form>

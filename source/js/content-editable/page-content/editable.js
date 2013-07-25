@@ -81,9 +81,14 @@ $('#save-changes').live('click', function ()
 
 	$('body.auth [data-content-editable]').each(function ()
 	{
-		var index, content, paragraph, i;
+		var index, content, paragraph, i, string;
 
 		index = $(this).data('content-editable');
+
+		// no second paragraphs
+		if ( ! index) {
+			return;
+		}
 
 		if ($(this).is('p'))
 		{
@@ -92,11 +97,18 @@ $('#save-changes').live('click', function ()
 			paragraph = $(this).next();
 
 			i = 1;
-			while (paragraph.is('p') && ! paragraph.is('[data-content-editable]'))
-			{
-				content[i++] = paragraph.html();
+			while (paragraph.length && paragraph.is('p') && paragraph.is('[data-content-editable=""]'))
+			{	
+				string = paragraph.html();
+
+				// remove tags and strip spaces
+
+				if (string.length > 0) {
+					content[i++] = paragraph.html();
+				}
 				paragraph = paragraph.next();
 			}
+
 		}
 		else
 		{
