@@ -14,9 +14,7 @@ render_event_list = function (events)
 	var data, html, how, registration, first, collapse, collapse_trigger, event_options;
 
 	// clear event list
-	$('#event-list').html('')
-
-	console.log(events, events.length)
+	$('#event-list').html('');
 
 	if (events.length === 0)
 	{
