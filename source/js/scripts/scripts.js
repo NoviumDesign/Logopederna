@@ -19,18 +19,38 @@ $('a[data-toggle="collapse"]').live('click', function() {
 
 // nav on load
 $(document).ready(function() {
-	var url, view;
+	var url, view, slashes;
 
 	url = window.location.href;
-	view = url.substring(url.lastIndexOf('/') + 1);
 
-	if(view.length) {
-		if(view.indexOf('.') > -1) {
+	// removes eventual http://
+	url = url.substring(url.lastIndexOf('.') + 1);
+
+	slashes = url.split('/').length - 1;
+
+	if (slashes === 2)
+	{
+		// http://url/path/ => path
+		view = url.substring(url.indexOf('/') + 1, url.lastIndexOf('/'));
+	}
+	else
+	{
+		// http://url/path => path
+		view = url.substring(url.lastIndexOf('/') + 1);
+	}
+
+	if(view.length)
+	{
+		if(view.indexOf('.') > -1)
+		{
 			view = view.substring(0, view.indexOf('.'));
-		} else if(view.indexOf('#') > -1) {
+		} else if(view.indexOf('#') > -1)
+		{
 			view = view.substring(0, view.indexOf('#'));
 		}
-	} else {
+	}
+	else
+	{
 		view = 'index';
 	}
 
