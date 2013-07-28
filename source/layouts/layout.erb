@@ -27,11 +27,17 @@
         
     </head>
     <body id="<%= current_page.data.ID %>" class="<%= page_classes %>">
-        <!--[if lt IE 7]>
+        <!--[if lt IE 8]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
         <%= partial "navbar" %>
+
+        <noscript>
+            <div class="container">
+                <h2>Denna webbsida använder en renderingsmotor skriven i JavaScript. Du har JavaScript inaktiverat och kan tyvärr inte se allt innehåll på denna webbplats.</h2>
+            </div>
+        </noscript>
 
         <%= yield %>
 
