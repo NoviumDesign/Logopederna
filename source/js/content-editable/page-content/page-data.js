@@ -65,7 +65,7 @@ $(document).ready(function ()
 			if (response.auth)
 			{
 				// make admin panel available
-				$('body').addClass('auth');
+				create_admin_stuffs();
 				make_editable(true);
 			}
 			else if (localStorage.secret)
