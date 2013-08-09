@@ -1,0 +1,9 @@
+<FilesMatch "\.(ini|inc|log|txt)$">
+  Deny from all
+  # Allow from env=REDIRECT_STATUS
+</FilesMatch>
+ 
+ 
+<FilesMatch robots.txt>
+  Allow from all
+</FilesMatch> 
