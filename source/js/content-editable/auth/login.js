@@ -97,6 +97,9 @@ $('body.admin #login').live('submit', function (event)
 	  		// logged in
 	  		localStorage.secret = response.secret;
 
+            // ajax settings
+            ajax_settings();
+
 	  		create_admin_stuffs();
 
 	  		$('body.admin #status').html(response.success.auth);

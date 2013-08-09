@@ -1,35 +1,40 @@
 // ajax settings
-$.ajaxSetup({
-	beforeSend: function (xhr, request)
-	{
-		// prepends base path
-		request.url = BACKEN_URL + '/' + request.url;
-	},
-	data:
-	{
-		// adds status
-		secret: localStorage.secret
-	},
-	// set data type as json
-	dataType: 'json'
-});
-
-cors.beforeSend = function ()
+var ajax_settings = function ()
 {
-	// append secret to send
-	if (localStorage.secret !== 'undefined' && localStorage.secret)
-	{
-		if (this.data !== 'undefined' && this.data)
+	$.ajaxSetup({
+		beforeSend: function (xhr, request)
 		{
-			this.data.secret = localStorage.secret;
-		}
-		else
+			// prepends base path
+			request.url = BACKEN_URL + '/' + request.url;
+		},
+		data:
 		{
-			this.data = {};
-			this.data.secret = localStorage.secret;
-		}
-	}
+			// adds status
+			secret: localStorage.secret
+		},
+		// set data type as json
+		dataType: 'json'
+	});
 
-    // apend backend url
-    this.url = BACKEN_URL + '/' + this.url;
+	cors.beforeSend = function ()
+	{
+		// append secret to send
+		if (localStorage.secret !== 'undefined' && localStorage.secret)
+		{
+			if (this.data !== 'undefined' && this.data)
+			{
+				this.data.secret = localStorage.secret;
+			}
+			else
+			{
+				this.data = {};
+				this.data.secret = localStorage.secret;
+			}
+		}
+
+	    // apend backend url
+	    this.url = BACKEN_URL + '/' + this.url;
+	}
 }
+
+ajax_settings();
