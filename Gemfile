@@ -25,6 +25,9 @@ gem "middleman-imageoptim", "~> 0.0.4"
 # Tool to publish to AWS S3 on build
 gem 'middleman-s3_sync'
 
+# Builder for the XML sitemap generator
+gem "builder", "~> 3.2.2"
+
 # For faster file watcher updates:
 # gem "wdm", "~> 0.1.0") # Windows
 

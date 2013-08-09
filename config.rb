@@ -54,6 +54,12 @@ set :images_dir, 'img'
 # Super-pretty URL:s using directorys for every html-page.
 activate :directory_indexes
 
+# Prevent middleman from putting a layout to the sitemap.xml
+page "/sitemap.xml", :layout => false
+
+# Ignore stuff that's not supposed to be inluded in the website
+  ignore '*.md'
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -79,4 +85,5 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+
 end
