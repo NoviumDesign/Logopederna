@@ -19,9 +19,6 @@ gem "middleman-minify-html", "~> 3.1.0"
 # => Ing optimizer engine
 gem "image_optim", "~> 0.8.1"
 
-# Img optimizer for midleman
-gem "middleman-imageoptim", "~> 0.0.4"
-
 # Tool to publish to AWS S3 on build
 gem 'middleman-s3_sync'
 
@@ -35,6 +32,9 @@ gem "builder", "~> 3.2.2"
 platforms :mri_18 do
   gem "ruby18_source_location"
 end
+
+# Img optimzer
+gem "middleman-smusher"
 
 # require js thing
 gem 'sprockets', '~> 2.0'

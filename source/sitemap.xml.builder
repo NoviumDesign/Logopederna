@@ -40,6 +40,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
       throw :next_page if page.url.start_with?('/layouts/')
       throw :next_page if page.url.start_with?('/apple-touch-icon')
       throw :next_page if page.url.start_with?('/admin')
+      throw :next_page if page.url.start_with?('/error404/')
       throw :next_page if page.url.end_with?('.xml')
       throw :next_page if page.url.start_with?('/.')   # .htaccess, .DS_Store, .git etc.
       throw :next_page if page.url == '/robots.txt'

@@ -77,8 +77,9 @@ configure :build do
   # GZip on build
   activate :gzip
 
-  # Img optimizing (requires local libs outside the gem system. For more info, look at https://github.com/toy/image_optim)
-  # activate :image_optim
+  # Img optimizer
+  require "middleman-smusher"
+  activate :smusher
 
   # Use relative URLs
   # activate :relative_assets
