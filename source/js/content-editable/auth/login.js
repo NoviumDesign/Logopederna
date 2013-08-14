@@ -65,6 +65,22 @@ var create_admin_stuffs = function ()
     '</div>' +
 '</div>'
 	);
+
+    // init datepicker
+    $(function() {
+        $( ".datepicker" ).datetimepicker({
+            minDate: 0,
+            hourMin: 6,
+            hourMax: 24,
+            stepMinute: 10,
+            currentText: 'Aktuell tid',
+            closeText: 'Klar',
+            timeOnlyTitle: 'Önskad leveranstid',
+            timeText: 'Tid',
+            hourText: 'Timma',
+            minuteText: 'Minut'
+        });
+    });
 }
 
 $('body.admin #login').live('submit', function (event)

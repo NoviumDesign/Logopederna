@@ -2150,20 +2150,3 @@ jQuery(function($){
     $.timepicker.version = "1.3.1";
 
 })(jQuery);
-
-// OPT IN for date/timepicker
-
-$(function() {
-    $( ".datepicker" ).datetimepicker({
-        minDate: 0,
-        hourMin: 6,
-        hourMax: 24,
-        stepMinute: 10,
-        currentText: 'Aktuell tid',
-        closeText: 'Klar',
-        timeOnlyTitle: 'Önskad leveranstid',
-        timeText: 'Tid',
-        hourText: 'Timma',
-        minuteText: 'Minut'
-    });
-});
