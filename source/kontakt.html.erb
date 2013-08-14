@@ -1,0 +1,57 @@
+---
+title: Logopederna
+description:
+keywords:
+ID: kontakt
+---
+
+<div class="tab-content">
+  <div id="A" class="tab-pane fade in active default-tab">
+    <div class="map kungsholmen">
+      <div class="container exstended-container">
+        <div class="adress">
+          <p class="lead"><span data-content-editable="kungsholmenStreet">Hantverkargatan 25 B,</span><span data-content-editable="kungsholmenCity">104 22 Stockholm </span><span data-content-editable="kungsholmenPhone">Tel: 08-4001 50 30 </span><span data-content-editable="kungsholmenEmail">info@logopederna.se</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="B" class="tab-pane fade">
+    <div class="map lidingo">
+      <div class="container exstended-container">
+        <div class="adress">
+          <p class="lead"><span data-content-editable="lidingoStreet">Stockholmsvägen 33 plan 5,</span><span data-content-editable="lidingoCity">181 33 Lidingö</span><span lidingoPhone>Tel: 073-260 28 82</span><span data-content-editable="lidingoEmail">info@logopederna.se</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tabbable tabs-below">
+  <ul class="nav nav-tabs offices">
+    <li><span data-content-editable="span1"></span></li>
+    <li class="active"><a href="#A" data-toggle="tab" data-content-editable="a1"></a></li>
+    <li><a href="#B" data-toggle="tab" data-content-editable="a2"></a></li>
+  </ul>
+</div>
+<div class="container">
+  <div id="staff" class="row">
+    <div class="span12">
+      <h2 data-content-editable="h1"></h2>
+    </div>
+    <% data.people.speechtherapist.each do |employee| %>
+    <div class="span3">
+      <div class="portrait <%= employee %>">
+        <div itemscope itemtype="http://schema.org/Person">
+          <span itemprop="employee">
+            <span itemprop="email">
+              <a data-toggle="popover" data-content-editable="<%= employee %>-name"></a>
+            </span>
+          </span>
+          <span itemprop="jobTitle" data-content-editable="<%= employee %>-title"></span>
+          <span itemprop="telephone" data-content-editable="<%= employee %>-phone"></span>
+          <span class="only-admin" itemprop="email-hidden" data-content-editable="<%= employee %>-email"></span>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
