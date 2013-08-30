@@ -72,10 +72,10 @@ function tags() {
 
 	url = window.location.href;
 
-	$('.tab-pane').not('.default-tab').removeClass('active in');
-
 	if(url.indexOf('#') > -1) {
 		tag = url.substring(url.lastIndexOf('#'));
+
+		$('.tab-pane').removeClass('active in');
 
 		$(tag).addClass('active in');
 	}
