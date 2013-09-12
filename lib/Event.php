@@ -95,7 +95,13 @@ class Event
 		$output = array();
 		while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC))
 		{
-			$output[$row['event_id']] = $row['data'];
+			// replace nl with br
+			$data_without_nl = nl2br($row['data']);
+
+			// nl haven't disapeard, remove them
+			$data_without_nl = trim(preg_replace('/\s\s+/', ' ', $data_without_nl));
+
+			$output[$row['event_id']] = $data_without_nl;
 		}
 
 		return $output;
@@ -111,7 +117,14 @@ class Event
 
 		$row = mysqli_fetch_object($query);
 
-		return $row->data;
+		// replace nl with br
+                $data_without_nl = nl2br($row->data);
+
+                // nl haven't disapeard, remove them
+                $data_without_nl = trim(preg_replace('/\s\s+/', ' ', $data_without_nl));
+
+
+		return $data_without_nl;
 	}
 
 	public function delete ($event_id)
