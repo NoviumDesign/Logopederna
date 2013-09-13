@@ -16,9 +16,6 @@ gem "therubyracer"
 # HTML minifier
 gem "middleman-minify-html", "~> 3.1.0"
 
-# => Ing optimizer engine
-gem "image_optim", "~> 0.8.1"
-
 # Tool to publish to AWS S3 on build
 gem 'middleman-s3_sync'
 
