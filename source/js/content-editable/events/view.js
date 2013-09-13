@@ -93,7 +93,7 @@ render_event_list = function (events)
 				'</div>' +
 				'<div class="span6">' +
 					collapse;
-	}
+		}
 		else
 		{
 			// normal event

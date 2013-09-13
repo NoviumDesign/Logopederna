@@ -66,8 +66,14 @@ $('[contenteditable]').live('paste', function (event)
 	var that = $(this);
 	setTimeout(function ()
 		{
+			var text = that.text();
+
+			// remove newlines and tabs which are not allowed
+			text = text.replace(/\n/g, '');
+			text = text.replace(/\t/g, '');
+
 			// inner html = inner text
-			that.html(that.text());
+			that.html(text);
 		}, 0);
 });
 
